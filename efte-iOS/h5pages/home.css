@@ -1,0 +1,23 @@
+body {
+    font-family: Verdana;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: lightgray;
+    margin: 10px auto;
+}
+
+.btn.DPAppControl-highlight {
+	background-color: darkgray;
+}
+
+#txt_json, #txt_query {
+	width: 90%;
+	height: 100px;
+	margin: auto;
+}

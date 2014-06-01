@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript" src="DPApp.js"></script>
+    <script type="text/javascript" src="DPAppControl.js"></script>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+</head>
+<body>
+<h1>Hybrid JSBridge Test Page5</h1>
+
+<label>dealid:<input id="txt_dealid" value="2275728" /></label>
+<div id="btn_ajax" class="btn">
+    ajax load deal
+</div>
+
+<div id="btn_gotodetail" class="btn">
+   	Go to detail 
+</div>
+
+<div id="btn_modal" class="btn">
+   	open modal page
+</div>
+
+<textarea id="txt_json"></textarea>
+
+<script type="text/javascript">
+
+DPApp.setTitle('Home');
+
+var global_deal = null;
+
+var btnAjax = new DPAppControl($('#btn_ajax').get(0));
+
+btnAjax.onClick = function () {
+	DPApp.ajax({
+		url: 'http://mm.dianping.com/ajax/tuan/dealgn.json?cityid=1&id=' + $('#txt_dealid').val(),
+		success: function(deal) {
+			global_deal = deal;
+			$('#txt_json').val(JSON.stringify(deal, true, 4));
+			console.log(arguments);
+		},
+		fail: function() {
+			console.log(arguments);
+		}
+	});
+}
+
+var btnGo = new DPAppControl($('#btn_gotodetail').get(0));
+btnGo.onClick = function () {
+	DPApp.action.open('detail', {deal: global_deal});
+}
+
+var btnModal = new DPAppControl($('#btn_modal').get(0));
+btnModal.onClick = function () {
+	DPApp.action.open('login', {}, true);
+}
+
+DPApp.startRefresh = function () {
+	alert('refresh');
+	DPApp.stopRefresh();
+	window.location.reload();
+};
+
+</script>
+</body>
+</html>
+

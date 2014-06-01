@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "EFTEWebViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    EFTEWebViewController *vc = [EFTEWebViewController new];
+    vc.page = @"home";
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

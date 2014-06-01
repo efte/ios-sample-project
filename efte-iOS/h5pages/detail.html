@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript" src="DPApp.js"></script>
+    <script type="text/javascript" src="DPAppControl.js"></script>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+</head>
+<body>
+<h1>Detail Test Page 1</h1>
+<div id="btn_back" class="btn">
+   back 
+</div>
+
+
+<label>query:
+<textarea id="txt_query"></textarea>
+</label>
+<script type="text/javascript">
+
+DPApp.setTitle('Detail');
+
+var btnBack = new DPAppControl($('#btn_back').get(0));
+
+btnBack.onClick = function () {
+	DPApp.action.back();
+}
+
+DPApp.action.get(function(query) {
+	$('#txt_query').val(JSON.stringify(query));
+})
+
+</script>
+</body>
+</html>
+
