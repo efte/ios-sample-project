@@ -65,12 +65,12 @@ static const char *efteQueryTag = "efteQueryTag";
                 NSLog(@"error: page[%@], class[%@] not UIViewController+EFTENavigator", page, clz);
             }
         }
-    } else {    // efte webviewcontroller
-        EFTEWebViewController *vc = [EFTEWebViewController new];
-        vc.page = page;
-        return vc;
     }
-    return nil;
+    
+    // efte webviewcontroller
+    EFTEWebViewController *vc = [EFTEWebViewController new];
+    vc.page = page;
+    return vc;
 }
 
 @end

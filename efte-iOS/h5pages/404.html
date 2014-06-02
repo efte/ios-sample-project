@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>404</title>
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript" src="DPApp.js"></script>
+    <script type="text/javascript" src="DPAppControl.js"></script>
+    <style type="text/css">
+    html, body {
+    	background-color: #f8f8f8;
+    	margin: 0;
+    	padding: 0;
+    	width: 100%;
+    	height: 100%;
+    }
+    #notfound {
+    	height: 200px;
+    	text-align: center;
+    	color: #ccc;
+    	font-family: 'Menlo';
+    }
+
+    #error {
+    	height: 100px;
+    	line-height: 100px;
+    	margin: auto;
+    	font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="notfound">
+	<div id="error">
+	404 
+	</div>
+	<div id="message">
+		page [user] not found
+	</div>
+</div>
+
+<script type="text/javascript">
+DPApp.setTitle('404');
+DPApp.action.get(function(query) {
+    var page = query.page || '';
+    $('message').html('page [' + page + '] not found');
+});
+</script>
+</body>
+</html>
+

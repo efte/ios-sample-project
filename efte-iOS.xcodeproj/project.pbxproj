@@ -36,6 +36,7 @@
 		C13FE545193B58A4007FEEB0 /* pages.json in Resources */ = {isa = PBXBuildFile; fileRef = C13FE531193B58A4007FEEB0 /* pages.json */; };
 		C13FE546193B58A4007FEEB0 /* EFTEUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C13FE534193B58A4007FEEB0 /* EFTEUtil.m */; };
 		C13FE547193B58A4007FEEB0 /* NSURL+PathExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C13FE536193B58A4007FEEB0 /* NSURL+PathExt.m */; };
+		C189DEDF193C1B4B007193C2 /* 404.html in Resources */ = {isa = PBXBuildFile; fileRef = C189DEDE193C1B4B007193C2 /* 404.html */; };
 		F09488A9754446C999A602A4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B3DB347E24402F9119E76C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		C13FE534193B58A4007FEEB0 /* EFTEUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTEUtil.m; sourceTree = "<group>"; };
 		C13FE535193B58A4007FEEB0 /* NSURL+PathExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+PathExt.h"; sourceTree = "<group>"; };
 		C13FE536193B58A4007FEEB0 /* NSURL+PathExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+PathExt.m"; sourceTree = "<group>"; };
+		C189DEDE193C1B4B007193C2 /* 404.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 404.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 		C13FE51A193B58A4007FEEB0 /* h5pages */ = {
 			isa = PBXGroup;
 			children = (
+				C189DEDE193C1B4B007193C2 /* 404.html */,
 				C13FE51B193B58A4007FEEB0 /* detail.html */,
 				C13FE51C193B58A4007FEEB0 /* DPApp.js */,
 				C13FE51D193B58A4007FEEB0 /* DPAppControl.js */,
@@ -352,6 +355,7 @@
 				C13FE53C193B58A4007FEEB0 /* home.html in Resources */,
 				C13FE53D193B58A4007FEEB0 /* login.html in Resources */,
 				C13FE538193B58A4007FEEB0 /* detail.html in Resources */,
+				C189DEDF193C1B4B007193C2 /* 404.html in Resources */,
 				C13FE4F3193B51B8007FEEB0 /* InfoPlist.strings in Resources */,
 				C13FE4FB193B51B8007FEEB0 /* Images.xcassets in Resources */,
 			);
