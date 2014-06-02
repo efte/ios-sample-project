@@ -101,9 +101,14 @@
 }
 
 #pragma mark - js bridge 
-- (NSString *) jsScheme
+- (NSString *)jsScheme
 {
     return @"js://";
+}
+
+- (NSString *)urlScheme
+{
+    return @"efte://";
 }
 
 - (BOOL)webView:(UIWebView *)web shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
@@ -111,6 +116,12 @@
     if ([request.URL.absoluteString hasPrefix:[self jsScheme]]) {
         [self handleMessage:[request.URL queryParams]];
         return NO;
+    }
+    
+    if ([request.URL.absoluteString hasPrefix:[self urlScheme]]) {
+        NSDictionary *query = request.URL.queryParams;
+        NSString *page = request.URL.host;
+        [self efteOpenPage:page withQuery:query];
     }
     return YES;
 }

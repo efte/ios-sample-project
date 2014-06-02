@@ -7,6 +7,8 @@
 //
 
 #import "CMTest1ViewController.h"
+#import "UIViewController+EFTENavigator.h"
+#import "EFTEUtil.h"
 
 @interface CMTest1ViewController ()
 
@@ -36,6 +38,10 @@
     [button sizeToFit];
     button.center = self.view.center;
     [self.view addSubview:button];
+    
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 300, 300, 100)];
+    textView.text = [NSString stringWithFormat:@"query: %@", [EFTEUtil json2string:self.efteQuery]];
+    [self.view addSubview:textView];
 }
 
 - (void)dismiss
