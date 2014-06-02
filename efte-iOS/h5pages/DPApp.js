@@ -177,6 +177,10 @@
 
         setTitle: function(title) {
             DPApp.send_message('setTitle', {title: title});
+        },
+ 
+        takePhoto: function () {
+            DPApp.send_message('imagePicker');
         }
 
     };

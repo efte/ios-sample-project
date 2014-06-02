@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <script type="text/javascript" src="zepto.js"></script>
+    <script type="text/javascript" src="DPApp.js"></script>
+    <script type="text/javascript" src="DPAppControl.js"></script>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+</head>
+<body>
+<h1>Image Test</h1>
+<div id="btn_imagePicker" class="btn">
+   image picker
+</div>
+
+<script type="text/javascript">
+
+DPApp.setTitle('image test');
+
+var btn = new DPAppControl($('#btn_imagePicker').get(0));
+
+btn.onClick = function () {
+	DPApp.takePhoto();
+}
+
+</script>
+</body>
+</html>
+

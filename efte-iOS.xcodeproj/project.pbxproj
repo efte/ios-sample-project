@@ -37,6 +37,8 @@
 		C13FE546193B58A4007FEEB0 /* EFTEUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C13FE534193B58A4007FEEB0 /* EFTEUtil.m */; };
 		C13FE547193B58A4007FEEB0 /* NSURL+PathExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C13FE536193B58A4007FEEB0 /* NSURL+PathExt.m */; };
 		C189DEDF193C1B4B007193C2 /* 404.html in Resources */ = {isa = PBXBuildFile; fileRef = C189DEDE193C1B4B007193C2 /* 404.html */; };
+		C189DEE2193C49B7007193C2 /* EFTEWebViewController+ImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C189DEE1193C49B7007193C2 /* EFTEWebViewController+ImagePicker.m */; };
+		C189DEE4193C4E0B007193C2 /* testimage.html in Resources */ = {isa = PBXBuildFile; fileRef = C189DEE3193C4E0B007193C2 /* testimage.html */; };
 		F09488A9754446C999A602A4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B3DB347E24402F9119E76C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,9 @@
 		C13FE535193B58A4007FEEB0 /* NSURL+PathExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+PathExt.h"; sourceTree = "<group>"; };
 		C13FE536193B58A4007FEEB0 /* NSURL+PathExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+PathExt.m"; sourceTree = "<group>"; };
 		C189DEDE193C1B4B007193C2 /* 404.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 404.html; sourceTree = "<group>"; };
+		C189DEE0193C49B7007193C2 /* EFTEWebViewController+ImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFTEWebViewController+ImagePicker.h"; sourceTree = "<group>"; };
+		C189DEE1193C49B7007193C2 /* EFTEWebViewController+ImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EFTEWebViewController+ImagePicker.m"; sourceTree = "<group>"; };
+		C189DEE3193C4E0B007193C2 /* testimage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testimage.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +215,7 @@
 		C13FE51A193B58A4007FEEB0 /* h5pages */ = {
 			isa = PBXGroup;
 			children = (
+				C189DEE3193C4E0B007193C2 /* testimage.html */,
 				C189DEDE193C1B4B007193C2 /* 404.html */,
 				C13FE51B193B58A4007FEEB0 /* detail.html */,
 				C13FE51C193B58A4007FEEB0 /* DPApp.js */,
@@ -246,6 +252,8 @@
 				C13FE52B193B58A4007FEEB0 /* EFTEWebViewController+Navigator.m */,
 				C13FE52C193B58A4007FEEB0 /* EFTEWebViewController+title.h */,
 				C13FE52D193B58A4007FEEB0 /* EFTEWebViewController+title.m */,
+				C189DEE0193C49B7007193C2 /* EFTEWebViewController+ImagePicker.h */,
+				C189DEE1193C49B7007193C2 /* EFTEWebViewController+ImagePicker.m */,
 			);
 			path = jsbridge;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C189DEE4193C4E0B007193C2 /* testimage.html in Resources */,
 				C13FE53E193B58A4007FEEB0 /* zepto.js in Resources */,
 				C13FE539193B58A4007FEEB0 /* DPApp.js in Resources */,
 				C13FE53A193B58A4007FEEB0 /* DPAppControl.js in Resources */,
@@ -412,6 +421,7 @@
 				C13FE546193B58A4007FEEB0 /* EFTEUtil.m in Sources */,
 				C13FE541193B58A4007FEEB0 /* EFTEWebViewController+Ajax.m in Sources */,
 				C13FE4F9193B51B8007FEEB0 /* AppDelegate.m in Sources */,
+				C189DEE2193C49B7007193C2 /* EFTEWebViewController+ImagePicker.m in Sources */,
 				C13FE537193B58A4007FEEB0 /* CMTest1ViewController.m in Sources */,
 				C13FE547193B58A4007FEEB0 /* NSURL+PathExt.m in Sources */,
 				C13FE540193B58A4007FEEB0 /* EFTEWebViewController.m in Sources */,
