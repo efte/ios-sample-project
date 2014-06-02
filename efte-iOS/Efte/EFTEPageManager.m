@@ -58,7 +58,9 @@
         // TODO: 1. load from download dir
         // load from bundle
         NSString *path = [[NSBundle mainBundle] pathForResource:page ofType:@"html"];
-        return [NSURL fileURLWithPath:path];
+        if (path)
+            return [NSURL fileURLWithPath:path];
+        return nil;
     }
 }
 

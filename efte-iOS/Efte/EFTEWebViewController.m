@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 大众点评. All rights reserved.
 //
 
+#import "UIViewController+EFTENavigator.h"
 #import "EFTEWebViewController.h"
 #import "NSURL+PathExt.h"
 #import "EFTEPageManager.h"
@@ -61,6 +62,10 @@
 - (void)loadPage
 {
     NSURL *url = [[EFTEPageManager sharedInstance] url4page:self.page];
+    if (!url) { // page not found
+        url = [[EFTEPageManager sharedInstance] url4page:@"404"];
+        self.efteQuery = @{@"page": self.page};
+    }
     [self.webView stopLoading];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60];
     [self.webView loadRequest:request];

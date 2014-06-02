@@ -24,6 +24,10 @@
    	open modal page
 </div>
 
+<div id="btn_404" class="btn">
+   	open page not exists
+</div>
+
 <textarea id="txt_json"></textarea>
 
 <script type="text/javascript">
@@ -56,6 +60,12 @@ btnGo.onClick = function () {
 var btnModal = new DPAppControl($('#btn_modal').get(0));
 btnModal.onClick = function () {
 	DPApp.action.open('login', {}, true);
+}
+
+
+var btn404 = new DPAppControl($('#btn_404').get(0));
+btn404.onClick = function () {
+	DPApp.action.open('pagehaha');
 }
 
 DPApp.startRefresh = function () {

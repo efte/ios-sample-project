@@ -36,7 +36,6 @@
 	404 
 	</div>
 	<div id="message">
-		page [user] not found
 	</div>
 </div>
 
@@ -44,7 +43,7 @@
 DPApp.setTitle('404');
 DPApp.action.get(function(query) {
     var page = query.page || '';
-    $('message').html('page [' + page + '] not found');
+    $('#message').html('page [' + page + '] not found');
 });
 </script>
 </body>
