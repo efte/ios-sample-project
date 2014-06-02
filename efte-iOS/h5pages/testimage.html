@@ -14,6 +14,9 @@
    image picker
 </div>
 
+<div id="imgbox">
+</div>
+
 <script type="text/javascript">
 
 DPApp.setTitle('image test');
@@ -21,7 +24,11 @@ DPApp.setTitle('image test');
 var btn = new DPAppControl($('#btn_imagePicker').get(0));
 
 btn.onClick = function () {
-	DPApp.takePhoto();
+	DPApp.takePhoto(function(image) {
+		var img = document.createElement('img');
+		img.src = 'data:image/jpeg;base64,' + image;
+		$('#imgbox').append(img);
+	});
 }
 
 </script>

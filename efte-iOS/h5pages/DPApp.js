@@ -179,8 +179,10 @@
             DPApp.send_message('setTitle', {title: title});
         },
  
-        takePhoto: function () {
-            DPApp.send_message('imagePicker');
+        takePhoto: function (callback) {
+            DPApp.send_message('imagePicker', {}, function(result) {
+                $.isFunction(callback) && callback(result && result.image);
+            });
         }
 
     };

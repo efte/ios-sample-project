@@ -8,11 +8,14 @@
 
 #import "EFTEWebViewController+ImagePicker.h"
 
+typedef void (^ImagePickerBlock)(UIImage *image);
+
 @class EFTEImagePickerController;
-static EFTEImagePickerController *imagePickerController;
+static EFTEImagePickerController *_instanceImagePickerController;
 
 @interface EFTEImagePickerController : NSObject <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
+@property (copy, nonatomic) ImagePickerBlock completed;
 @end
 
 @implementation EFTEImagePickerController
@@ -27,8 +30,9 @@ static EFTEImagePickerController *imagePickerController;
     return self;
 }
 
-- (void)captureWithController:(UIViewController *)controller
+- (void)captureWithController:(UIViewController *)controller completed:(ImagePickerBlock)completed
 {
+    self.completed = completed;
     [controller presentModalViewController:self.imagePickerController animated:YES];
 }
 
@@ -36,24 +40,35 @@ static EFTEImagePickerController *imagePickerController;
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    NSLog(@"%@", image);
+    self.completed(image);
+    [self dismiss];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    [self.imagePickerController dismissModalViewControllerAnimated:YES];
+    [self dismiss];
 }
 
+- (void)dismiss
+{
+    [self.imagePickerController dismissModalViewControllerAnimated:YES];
+    _instanceImagePickerController = nil;
+}
 @end
 
 @implementation EFTEWebViewController (ImagePicker)
 
 - (void)jsapi_imagePicker:(NSDictionary *)parameters
 {
-    if (imagePickerController == nil) {
-        imagePickerController = [EFTEImagePickerController new];
+    if (_instanceImagePickerController == nil) {
+        _instanceImagePickerController = [EFTEImagePickerController new];
     }
-    [imagePickerController captureWithController:self];
+    __weak EFTEWebViewController *weakSelf = self;
+    [_instanceImagePickerController captureWithController:self completed:^(UIImage *image) {
+        NSData *imageData = UIImageJPEGRepresentation(image, 0.8);
+        NSString *base64string = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+        [weakSelf jsCallbackForId:parameters[@"callbackId"] withRetValue:@{@"image": base64string}];
+    }];
 }
 
 @end
