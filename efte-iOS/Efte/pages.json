@@ -1,15 +1,15 @@
 {
     "home": {
-//        "url": "http://localhost/crm-h5/home.html"
+        "url": "http://localhost/efte-h5/home.html"
     },
     "detail": {
-//        "url": "http://localhost/crm-h5/detail.html"
+        "url": "http://localhost/efte-h5/detail.html"
     },
     "user": null,
     "test1": {
         "class": "CMTest1ViewController"
     },
     "login": {
-//        "url": "http://localhost/crm-h5/login.html"
+        "url": "http://localhost/efte-h5/login.html"
     }
 }
