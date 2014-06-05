@@ -120,7 +120,12 @@
     
     if ([request.URL.absoluteString hasPrefix:[self urlScheme]]) {
         NSDictionary *query = request.URL.queryParams;
-        NSString *page = request.URL.host;
+        NSString *host = request.URL.host;
+        NSString *path = request.URL.path;
+        NSString *page = host;
+        if (path) {
+            page = [NSString stringWithFormat:@"%@%@", host, path];
+        }
         [self efteOpenPage:page withQuery:query];
     }
     return YES;

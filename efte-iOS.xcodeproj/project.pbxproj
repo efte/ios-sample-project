@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10B474319406C3D00BADEFD /* EFTEDebugTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10B474019406C3D00BADEFD /* EFTEDebugTableViewController.m */; };
+		C10B474419406C3D00BADEFD /* EFTEDebugTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C10B474219406C3D00BADEFD /* EFTEDebugTableViewController.xib */; };
+		C10B474719406C9000BADEFD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10B474619406C9000BADEFD /* HomeViewController.m */; };
 		C13FE4E9193B51B8007FEEB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13FE4E8193B51B8007FEEB0 /* Foundation.framework */; };
 		C13FE4EB193B51B8007FEEB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13FE4EA193B51B8007FEEB0 /* CoreGraphics.framework */; };
 		C13FE4ED193B51B8007FEEB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13FE4EC193B51B8007FEEB0 /* UIKit.framework */; };
@@ -55,6 +58,11 @@
 /* Begin PBXFileReference section */
 		1779D4465C444C95A6D4CBA5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		82B3DB347E24402F9119E76C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C10B474019406C3D00BADEFD /* EFTEDebugTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTEDebugTableViewController.m; sourceTree = "<group>"; };
+		C10B474119406C3D00BADEFD /* EFTEDebugTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTEDebugTableViewController.h; sourceTree = "<group>"; };
+		C10B474219406C3D00BADEFD /* EFTEDebugTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EFTEDebugTableViewController.xib; sourceTree = "<group>"; };
+		C10B474519406C9000BADEFD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		C10B474619406C9000BADEFD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C13FE4E5193B51B8007FEEB0 /* efte-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "efte-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13FE4E8193B51B8007FEEB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C13FE4EA193B51B8007FEEB0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,6 +178,8 @@
 				C13FE4F8193B51B8007FEEB0 /* AppDelegate.m */,
 				C13FE4FA193B51B8007FEEB0 /* Images.xcassets */,
 				C13FE4EF193B51B8007FEEB0 /* Supporting Files */,
+				C10B474519406C9000BADEFD /* HomeViewController.h */,
+				C10B474619406C9000BADEFD /* HomeViewController.m */,
 			);
 			path = "efte-iOS";
 			sourceTree = "<group>";
@@ -231,6 +241,9 @@
 		C13FE522193B58A4007FEEB0 /* Efte */ = {
 			isa = PBXGroup;
 			children = (
+				C10B474119406C3D00BADEFD /* EFTEDebugTableViewController.h */,
+				C10B474019406C3D00BADEFD /* EFTEDebugTableViewController.m */,
+				C10B474219406C3D00BADEFD /* EFTEDebugTableViewController.xib */,
 				C13FE523193B58A4007FEEB0 /* EFTEPageManager.h */,
 				C13FE524193B58A4007FEEB0 /* EFTEPageManager.m */,
 				C13FE525193B58A4007FEEB0 /* EFTEWebViewController.h */,
@@ -362,6 +375,7 @@
 				C13FE545193B58A4007FEEB0 /* pages.json in Resources */,
 				C13FE53B193B58A4007FEEB0 /* home.css in Resources */,
 				C13FE53C193B58A4007FEEB0 /* home.html in Resources */,
+				C10B474419406C3D00BADEFD /* EFTEDebugTableViewController.xib in Resources */,
 				C13FE53D193B58A4007FEEB0 /* login.html in Resources */,
 				C13FE538193B58A4007FEEB0 /* detail.html in Resources */,
 				C189DEDF193C1B4B007193C2 /* 404.html in Resources */,
@@ -423,10 +437,12 @@
 				C13FE4F9193B51B8007FEEB0 /* AppDelegate.m in Sources */,
 				C189DEE2193C49B7007193C2 /* EFTEWebViewController+ImagePicker.m in Sources */,
 				C13FE537193B58A4007FEEB0 /* CMTest1ViewController.m in Sources */,
+				C10B474719406C9000BADEFD /* HomeViewController.m in Sources */,
 				C13FE547193B58A4007FEEB0 /* NSURL+PathExt.m in Sources */,
 				C13FE540193B58A4007FEEB0 /* EFTEWebViewController.m in Sources */,
 				C13FE543193B58A4007FEEB0 /* EFTEWebViewController+title.m in Sources */,
 				C13FE542193B58A4007FEEB0 /* EFTEWebViewController+Navigator.m in Sources */,
+				C10B474319406C3D00BADEFD /* EFTEDebugTableViewController.m in Sources */,
 				C13FE53F193B58A4007FEEB0 /* EFTEPageManager.m in Sources */,
 				C13FE544193B58A4007FEEB0 /* UIViewController+EFTENavigator.m in Sources */,
 				C13FE4F5193B51B8007FEEB0 /* main.m in Sources */,

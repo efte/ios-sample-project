@@ -8,6 +8,7 @@
 
 #import "EFTEPageManager.h"
 #import "EFTEUtil.h"
+#import "EFTEDebugTableViewController.h"
 
 @interface EFTEPageManager ()
 @end
@@ -51,6 +52,11 @@
 
 - (NSURL *)url4page:(NSString *)page
 {
+    NSString *prefix = [EFTEDebugTableViewController prefixPath];
+    if (prefix) {
+        NSString *path = [NSString stringWithFormat:@"%@/%@.html", prefix, page];
+        return [NSURL URLWithString:path];
+    }
     NSDictionary *config = self.pageConfig[page];
     if (config && config[@"url"]) {
         return [NSURL URLWithString:config[@"url"]];
